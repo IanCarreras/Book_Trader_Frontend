@@ -3,11 +3,11 @@ import {
   GET_BOOKS
 } from '../constants'
 
-const BASE_URL = 'http://localhost:3030'
+const BASE_URL = 'http://localhost:8000'
 
 const getBooks = () => {
   return (dispatch) => {
-    axios.get(`${BASE_URL}/books`)
+    axios.get(`${BASE_URL}/api/books`)
     .then( ({ data }) => {
       dispatch({
         type: GET_BOOKS,

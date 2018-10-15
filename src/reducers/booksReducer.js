@@ -13,7 +13,8 @@ export default (state = defaultState, action) => {
 
   switch (action.type) {
     case GET_BOOKS:
-      return state
+      newState.books = action.data
+      return newState
     default:
       return state
   }
